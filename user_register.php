@@ -4,9 +4,11 @@ $_SESSION['user_name_error'] = "";
 $_SESSION['password_error'] = "";
 $error = null;
 
-$user_name = preg_replace( '/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['user_name']);
-$password = preg_replace( '/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['password']);
+//文字の前後の空白を削除する
+$user_name = preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['user_name']);
+$password = preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['password']);
 
+//空かチェック
 if (empty($user_name)) {
     $_SESSION['user_name_error'] = "ユーザー名を入力してください";
     $error = 1;

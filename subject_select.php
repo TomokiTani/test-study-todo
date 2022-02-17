@@ -9,4 +9,3 @@ $_SESSION['test_date'] = $_POST['test_date'];
 //リダイレクト
 header('Location: ./todo_items.php');
 exit();
-?>

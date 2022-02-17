@@ -10,7 +10,7 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center my-5">新規登録が完了しました</h1>
-        <div class="text-center" ><button onclick="location.href='./index.php'" class="btn btn-primary mt-4">ログインページ</button></div>
+        <div class="text-center"><button onclick="location.href='./index.php'" class="btn btn-primary mt-4">ログインページ</button></div>
     </div>
 </body>
 

@@ -25,8 +25,8 @@ session_start();
             </div>
             <div class="mt-5 mb-3"><button class="btn btn-primary" type="submit">登録</button></div>
         </form>
-        <?php if (!empty($_SESSION['item_name_error'])) echo  "<p>".$_SESSION['item_name_error']."</p>"; ?>
-        <?php if (!empty($_SESSION['deadline_error'])) echo  "<p>".$_SESSION['deadline_error']."</p>"; ?>
+        <?php if (!empty($_SESSION['item_name_error'])) echo  "<p>" . $_SESSION['item_name_error'] . "</p>"; ?>
+        <?php if (!empty($_SESSION['deadline_error'])) echo  "<p>" . $_SESSION['deadline_error'] . "</p>"; ?>
     </div>
 </body>
 

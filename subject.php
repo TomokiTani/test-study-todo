@@ -82,7 +82,7 @@ try {
 
                 <?php endforeach; ?>
             </table>
-            <?php else : ?><p>テストはありません</p>
+        <?php else : ?><p>テストはありません</p>
         <?php endif; ?>
         <button class="btn btn-primary" onclick="location.href='./subject_register_form.php'">追加</button>
     </div>

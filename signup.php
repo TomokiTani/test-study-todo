@@ -24,8 +24,8 @@ session_start();
             </div>
             <button type="submit" class="btn btn-primary mt-4 mb-3">新規登録</button>
         </form>
-        <?php if (isset($_SESSION['user_name_error'])) echo  "<p>".$_SESSION['user_name_error']."</p>"; ?>
-        <?php if (isset($_SESSION['password_error'])) echo  "<p>".$_SESSION['password_error']."</p>"; ?>
+        <?php if (isset($_SESSION['user_name_error'])) echo  "<p>" . $_SESSION['user_name_error'] . "</p>"; ?>
+        <?php if (isset($_SESSION['password_error'])) echo  "<p>" . $_SESSION['password_error'] . "</p>"; ?>
     </div>
 
 </body>
@@ -33,4 +33,5 @@ session_start();
 $_SESSION['user_name_error'] = "";
 $_SESSION['password_error'] = "";
 ?>
+
 </html>

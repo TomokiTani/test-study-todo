@@ -32,4 +32,3 @@ try {
     var_dump($e);
     exit();
 }
-?>

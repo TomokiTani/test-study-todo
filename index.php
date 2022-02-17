@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 ?>
@@ -25,10 +25,11 @@ session_start();
             <div class="mt-5"><button type="submit" class="btn btn-primary">ログイン</button></div>
         </form>
         <div class="my-3"><button onclick="location.href='./signup.php'" class="btn btn-success">新規登録</button></div>
-        <?php if (isset($_SESSION['login_error'])) echo  "<p>".$_SESSION['login_error']."</p>"; ?>
+        <?php if (isset($_SESSION['login_error'])) echo  "<p>" . $_SESSION['login_error'] . "</p>"; ?>
     </div>
 </body>
-<?php 
-$_SESSION['login_error']="";
+<?php
+$_SESSION['login_error'] = "";
 ?>
+
 </html>

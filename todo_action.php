@@ -8,6 +8,7 @@ try {
     $dbuser = getenv('DB_USERNAME');
     $dbpass = getenv('DB_PASSWORD');
     $dbh = new PDO($dsn, $dbuser, $dbpass);
+
     //エラーが起きた時のモードを指定
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

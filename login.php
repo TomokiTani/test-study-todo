@@ -37,16 +37,15 @@ try {
 }
 
 //パスワードがあっているかチェック
-if(!empty($list) && password_verify($_POST['password'], $list['password'])){
+if (!empty($list) && password_verify($_POST['password'], $list['password'])) {
     //ユーザー情報をセッションに保存
     $_SESSION['user_id'] = $list['id'];
     //リダイレクト
     header('Location: ./subject.php');
     exit;
-}else{
+} else {
     $_SESSION['login_error'] = "ユーザー名もしくはパスワードが間違っています";
     //リダイレクト
     header('Location: ./index.php');
     exit;
 }
-?>
