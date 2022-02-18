@@ -16,7 +16,7 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //データを取ってくるsql文
-    $sql = 'SELECT * FROM subjects WHERE user_id = :user_id AND is_deleted = 0';
+    $sql = 'SELECT * FROM subjects WHERE user_id = :user_id AND is_deleted = 0 ORDER BY test_date ASC';
 
     //sqlを実行する準備
     $stmt = $dbh->prepare($sql);
@@ -41,7 +41,7 @@ try {
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>テスト勉強</title>
+    <title>テスト勉強todo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
