@@ -5,7 +5,7 @@ session_start();
 //サニタイズ
 $post = array();
 foreach ($_POST as $key => $value) {
-    $post[$key] = htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+    $post[$key] = htmlspecialchars(preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $value), ENT_QUOTES, 'UTF-8');
 }
 
 $error = false;

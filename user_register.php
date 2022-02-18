@@ -4,8 +4,10 @@ $_SESSION['user_name_error'] = "";
 $_SESSION['password_error'] = "";
 $error = null;
 
-//文字の前後の空白を削除する
-$user_name = preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['user_name']);
+//サニタイズ
+$user_name = htmlspecialchars(preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['user_name']), ENT_QUOTES, 'UTF-8');
+
+//前後のスペースを削除
 $password = preg_replace('/\A[\p{C}\p{Z}]++|[\p{C}\p{Z}]++\z/u', '', $_POST['password']);
 
 //空かチェック
@@ -23,8 +25,6 @@ if (!empty($error)) {
     exit;
 }
 
-//サニタイズ
-$user_name = htmlspecialchars($user_name);
 //ハッシュ化
 $password = password_hash($password, PASSWORD_DEFAULT);
 
